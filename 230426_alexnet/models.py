@@ -8,7 +8,7 @@ from keras.datasets import cifar10
 from keras.callbacks import TensorBoard
 from pathlib import Path
 from datetime import datetime
-
+ 
 """
 구현할 목록
 1. activation func(relu, softmax)
@@ -58,7 +58,7 @@ class AlexNet(Sequential):
         self.add(layers.Dropout(0.5))
         self.add(layers.Dense(10, activation="softmax"))
         self.compile(loss='sparse_categorical_crossentropy', 
-                    optimizer=tf.optimizers.SGD(learning_rate=0.001), 
+                    optimizer=tf.optimizers.SGD(learning_rate=0.0005), 
                     metrics=['accuracy'])
 
 
