@@ -56,6 +56,8 @@ class AlexNet(Sequential):
         self.add(layers.Flatten())
         self.add(layers.Dense(4096, activation="relu"))
         self.add(layers.Dropout(0.5))
+        self.add(layers.Dense(4096, activation="relu"))
+        self.add(layers.Dropout(0.5))
         self.add(layers.Dense(10, activation="softmax"))
         self.compile(loss='sparse_categorical_crossentropy', 
                     optimizer=tf.optimizers.SGD(learning_rate=0.0005), 
