@@ -54,11 +54,13 @@ class AlexNet(Sequential):
         self.add(layers.BatchNormalization())
         self.add(layers.MaxPool2D(pool_size=(3, 3), strides=(2, 2)))
         self.add(layers.Flatten())
+
         self.add(layers.Dense(4096, activation="relu"))
         self.add(layers.Dropout(0.5))
         self.add(layers.Dense(4096, activation="relu"))
         self.add(layers.Dropout(0.5))
-        self.add(layers.Dense(10, activation="softmax"))
+        self.add(layers.Dense(1000, activation="softmax"))
+        
         self.compile(loss='sparse_categorical_crossentropy', 
                     optimizer=tf.optimizers.SGD(learning_rate=0.0005), 
                     metrics=['accuracy'])
