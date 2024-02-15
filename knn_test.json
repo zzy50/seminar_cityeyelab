@@ -994,7 +994,10 @@
       "name": "knn.ipynb",
       "provenance": []
     },
-    "kernelspec": { "display_name": "Python 3", "name": "python3" },
+    "kernelspec": {
+      "display_name": "Python 3", 
+      "name": "python3"
+    },
     "language_info": { "name": "python" },
     "orig_nbformat": 4
   },
